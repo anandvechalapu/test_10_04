@@ -1,102 +1,129 @@
 public class ConfigureJiraSoftware {
- 
-  private String jiraUsername;
-  private String jiraPassword;
-  private String jiraUrl;
-  private String repositoryName;
-  
-  // constructor
-  public ConfigureJiraSoftware(String jiraUsername, String jiraPassword, String jiraUrl, String repositoryName) {
-    this.jiraUsername = jiraUsername;
-    this.jiraPassword = jiraPassword;
-    this.jiraUrl = jiraUrl;
-    this.repositoryName = repositoryName;
-  }
-  
-  // Setters
-  
-  public void setJiraUsername(String jiraUsername) {
-    this.jiraUsername = jiraUsername;
-  }
-  
-  public void setJiraPassword(String jiraPassword) {
-    this.jiraPassword = jiraPassword;
-  }
-  
-  public void setJiraUrl(String jiraUrl) {
-    this.jiraUrl = jiraUrl;
-  }
-  
-  public void setRepositoryName(String repositoryName) {
-    this.repositoryName = repositoryName;
-  }
-  
-  // Getters
-  
-  public String getJiraUsername() {
-    return this.jiraUsername;
-  }
-  
-  public String getJiraPassword() {
-    return this.jiraPassword;
-  }
-  
-  public String getJiraUrl() {
-    return this.jiraUrl;
-  }
-  
-  public String getRepositoryName() {
-    return this.repositoryName;
-  }
-  
-  // Other methods
-  
-  public void resetForm() {
-    this.jiraUsername = null;
-    this.jiraPassword = null;
-    this.jiraUrl = null;
-    this.repositoryName = null;
-  }
-  
-  public void saveConfiguration() {
-    // save configuration to the database
-  }
-  
-  public void displayList() {
-    // display list with title, user name, url and action
-  }
-  
-  public void editList() {
-    // edit list with title, user name, url and action
-  }
-  
-  public void deleteList() {
-    // delete list with title, user name, url and action
-  }
-  
-  public void changeNumberOfEntries() {
-    // change number of entries to display in the list
-  }
-  
-  public void displayPagination() {
-    // display pagination under the list
-  }
-  
-  public void changePageNumber() {
-    // click on pagination to change the page numbers
-  }
-  
-  public void addMore() {
-    // add more button above the list to configure other Jira Software
-  }
-  
-  public void displayPopUpForm() {
-    // display pop up form
-  }
-  
-  public boolean authenticateJiraCredentials() {
-    // authenticate credentials and return response
-    return true;
-  }
-  
+    private String username;
+    private String password;
+    private String url;
+    private String repositoryName;
+    private int numberOfEntries;
+    private List<String> titleList;
+    private List<String> userNameList;
+    private List<String> urlList;
+    private List<String> actionList;
+    
+    public ConfigureJiraSoftware() {
+        this.titleList = new ArrayList<>();
+        this.userNameList = new ArrayList<>();
+        this.urlList = new ArrayList<>();
+        this.actionList = new ArrayList<>();
+    }
+    
+    public void loginToSacralAiWebsite() {
+        // code for login to Sacral.ai website
+    }
+    
+    public void accessExpertServicesPage() {
+        // code for accessing the "Expert Services to Change Business" page
+    }
+    
+    public void clickConfigure() {
+        // code for clicking the Configure button
+    }
+    
+    public void clickJiraSoftware() {
+        // code for clicking the Jira Software button
+    }
+    
+    public void setJiraSoftwareCredentials(String username, String password, String url, String repositoryName) {
+        this.username = username;
+        this.password = password;
+        this.url = url;
+        this.repositoryName = repositoryName;
+    }
+    
+    public void resetJiraSoftwareCredentials() {
+        this.username = null;
+        this.password = null;
+        this.url = null;
+        this.repositoryName = null;
+    }
+    
+    public void saveConfigure() {
+        // code for saving the configuration
+    }
+    
+    public boolean validateJiraCredentials() {
+        // code for validating the Jira credentials
+        return true;
+    }
+    
+    public void changeNumberOfEntries(int numberOfEntries) {
+        this.numberOfEntries = numberOfEntries;
+    }
+    
+    public void addMoreJiraSoftware() {
+        // code for adding more Jira Software
+    }
+    
+    public void addToTitleList(String title) {
+        this.titleList.add(title);
+    }
+    
+    public void addToUserNameList(String username) {
+        this.userNameList.add(username);
+    }
+    
+    public void addToUrlList(String url) {
+        this.urlList.add(url);
+    }
+    
+    public void addToActionList(String action) {
+        this.actionList.add(action);
+    }
+    
+    public void editTitle(int index, String title) {
+        this.titleList.set(index, title);
+    }
+    
+    public void editUserName(int index, String username) {
+        this.userNameList.set(index, username);
+    }
+    
+    public void editUrl(int index, String url) {
+        this.urlList.set(index, url);
+    }
+    
+    public void deleteTitle(int index) {
+        this.titleList.remove(index);
+    }
+    
+    public void deleteUserName(int index) {
+        this.userNameList.remove(index);
+    }
+    
+    public void deleteUrl(int index) {
+        this.urlList.remove(index);
+    }
+    
+    public void deleteAction(int index) {
+        this.actionList.remove(index);
+    }
+    
+    public void changePageNumber(int pageNumber) {
+        // code for changing the page number
+    }
+    
+    public List<String> getTitleList() {
+        return this.titleList;
+    }
+    
+    public List<String> getUserNameList() {
+        return this.userNameList;
+    }
+    
+    public List<String> getUrlList() {
+        return this.urlList;
+    }
+    
+    public List<String> getActionList() {
+        return this.actionList;
+    }
 }
